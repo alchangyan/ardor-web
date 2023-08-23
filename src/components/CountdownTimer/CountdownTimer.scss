@@ -1,0 +1,56 @@
+@use "../../scss/global";
+
+.countdown-timer {
+  display: inline-flex;
+  width: 560px;
+  height: 130px;
+  justify-content: center;
+  align-items: center;
+
+  &__ {
+    &block {
+      width: 90px;
+      height: 130px;
+    }
+
+    &number {
+      box-sizing: border-box;
+      width: 90px;
+      height: 90px;
+      border-radius: 14px;
+      background-color: global.$secondary;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      font-size: 44px;
+      letter-spacing: 1px;
+    }
+
+    &text {
+      box-sizing: border-box;
+      border-radius: 14px;
+      border: 1px solid global.$secondary;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: end;
+      font-weight: bold;
+      padding-bottom: 10px;
+      text-transform: uppercase;
+      position: relative;
+      top: -20px;
+      letter-spacing: 1px;
+    }
+
+    &connector {
+      width: 90px;
+      height: 130px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: 700;
+      font-size: 56px;
+    }
+  }
+}

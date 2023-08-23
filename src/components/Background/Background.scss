@@ -1,0 +1,59 @@
+.background {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+
+  & > img {
+    position: absolute;
+  }
+
+  &__ {
+    // &left1 {}
+
+    // &left2 {}
+
+    &left3 {
+      bottom: 0;
+    }
+    
+    &leftLineBlack {
+      bottom: 116px;
+    }
+
+    &leftLineWhite {
+      left: 306px;
+    }
+
+    &house {
+      bottom: 178px;
+    }
+
+    &right1 {
+      right: 0;
+      bottom: 0;
+    }
+    
+    &right2 {
+      right: 0;
+      bottom: 0;
+    }
+    
+    &rightLineWhite {
+      right: 0;
+    }
+
+
+    &tickets {
+      top: 160px;
+      right: 0;
+    }
+
+    &lottery {
+      right: 0;
+      bottom: 0;
+    }
+  }
+}

@@ -1,0 +1,231 @@
+@use "../../scss/global";
+
+.cta-button {
+  box-sizing: border-box;
+  border: 5px solid #fff;
+  border-radius: 52px;
+  padding: 24px;
+  display: inline-block;
+  width: 450px;
+  position: relative;
+  cursor: pointer;
+
+  &__ {
+    &content {
+      box-sizing: border-box;
+      border: 5px solid #fff;
+      font-size: 48px;
+      padding: 24px;
+      text-align: center;
+      border-radius: 30px;
+      font-weight: bold;
+    }
+
+    &circles {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    &circle {
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      
+      &:nth-child(even) {
+        background-color: global.$secondary;
+        animation: call-to-action 1s steps(2, jump-none) 0s infinite;
+      }
+      
+      &:nth-child(odd) {
+        background-color: #fff;
+        animation: call-to-action 1s steps(2, jump-none) 0.5s infinite;
+      }
+
+      // top
+      &_1,
+      &_2,
+      &_3,
+      &_4,
+      &_5,
+      &_6,
+      &_7,
+      &_8,
+      &_9,
+      &_10,
+      &_11,
+      &_12,
+      &_13 {
+        top: 4px;
+      }
+
+      &_1 {
+        left: 50px;
+      }
+      &_2 {
+        left: 78px;
+      }
+      &_3 {
+        left: 104px;
+      }
+      &_4 {
+        left: 130px;
+      }
+      &_5 {
+        left: 156px;
+      }
+      &_6 {
+        left: 182px;
+      }
+      &_7 {
+        left: 208px;
+      }
+      &_8 {
+        left: 234px;
+      }
+      &_9 {
+        left: 260px;
+      }
+      &_10 {
+        left: 286px;
+      }
+      &_11 {
+        left: 312px;
+      }
+      &_12 {
+        left: 338px;
+      }
+      &_13 {
+        left: 364px;
+      }
+
+      // right side
+      &_14 {
+        top: 5px;
+        left: 390px;
+      }
+      &_15 {
+        top: 18px;
+        left: 412px;
+      }
+      &_16 {
+        top: 40px;
+        left: 420px;
+      }
+      &_17 {
+        top: 66px;
+        left: 420px;
+      }
+      &_18 {
+        top: 92px;
+        left: 420px;
+      }
+      &_19 {
+        top: 118px;
+        left: 418px;
+      }
+      &_20 {
+        top: 139px;
+        left: 402px;
+      }
+
+      // bottom
+      &_21,
+      &_22,
+      &_23,
+      &_24,
+      &_25,
+      &_26,
+      &_27,
+      &_28,
+      &_29,
+      &_30,
+      &_31,
+      &_32,
+      &_33,
+      &_34 {
+        top: 145px;
+      }
+
+      &_21 {
+        left: 379px;
+      }
+      &_22 {
+        left: 353px;
+      }
+      &_23 {
+        left: 327px;
+      }
+      &_24 {
+        left: 301px;
+      }
+      &_25 {
+        left: 275px;
+      }
+      &_26 {
+        left: 249px;
+      }
+      &_27 {
+        left: 223px;
+      }
+      &_28 {
+        left: 197px;
+      }
+      &_29 {
+        left: 171px;
+      }
+      &_30 {
+        left: 145px;
+      }
+      &_31 {
+        left: 119px;
+      }
+      &_32 {
+        left: 93px;
+      }
+      &_33 {
+        left: 67px;
+      }
+      &_34 {
+        left: 40px;
+      }
+
+      // left
+      &_35 {
+        top: 134px;
+        left: 16px;
+      }
+      &_36 {
+        top: 110px;
+        left: 5px;
+      }
+      &_37 {
+        top: 84px;
+    left: 4px;
+      }
+      &_38 {
+        top: 58px;
+        left: 4px;
+      }
+      &_39 {
+        top: 32px;
+        left: 5px;
+      }
+      &_40 {
+        top: 11px;
+        left: 21px;
+      }
+    }
+  }
+}
+
+@keyframes call-to-action {
+  0% {
+    background-color: global.$secondary;
+  }
+
+  100% {
+    background-color: #fff;
+  }
+}

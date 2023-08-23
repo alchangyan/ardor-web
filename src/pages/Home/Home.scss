@@ -1,0 +1,37 @@
+.home {
+  & > h1 {
+    font-weight: 400;
+    font-size: 80px;
+    width: 1000px;
+    margin: 245px auto 0;
+    text-align: center;
+  }
+
+  &__ {
+    &buy-button {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    &next-draw {
+      margin-top: 108px;
+
+      & > div {
+        text-align: center;
+        &:nth-child(1) {
+          font-size: 40px;
+          font-weight: bold;
+        }
+        
+        &:nth-child(2) {
+          font-size: 32px;
+        }
+      }
+    }
+
+    &timer {
+      text-align: center;
+      margin-top: 40px;
+    }
+  }
+}

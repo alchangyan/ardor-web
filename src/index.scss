@@ -1,0 +1,22 @@
+@use "./scss/global";
+
+body {
+  margin: 0;
+  background-color: global.$primary;
+  color: #fff;
+  font-family: Gilroy;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+@font-face {
+  font-family: Gilroy;
+  src: url('./assets/fonts/Gilroy-Light.otf') format("opentype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: Gilroy;
+  src: url('./assets/fonts/Gilroy-ExtraBold.otf') format("opentype");
+  font-weight: bold;
+}
