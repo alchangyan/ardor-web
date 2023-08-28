@@ -1,0 +1,86 @@
+@use "../../scss/global";
+
+$cardWidth: 692px;
+$cardHeight: 640px;
+
+.card {
+  border-radius: 52px;
+  border: 5px solid #fff;
+  width: $cardWidth;
+  height: $cardHeight;
+  box-sizing: border-box;
+  position: relative;
+
+  &__ {
+    &wrapper {
+      display: inline-flex;
+      justify-content: end;
+      align-items: end;
+      width: $cardWidth + 84px;
+      height: $cardHeight + 84px;
+    }
+
+    &title {
+      display: flex;
+      align-items: start;
+      justify-content: center;
+      height: 270px;
+      padding: 45px;
+      box-sizing: border-box;
+
+      &-text {
+        margin-left: 50%;
+        width: 50%;
+        font-size: 80px;
+        color: global.$secondary;
+        font-weight: bold;
+        text-align: center;
+      }
+    }
+
+    &image {
+      position: absolute;
+      width: 460px;
+      top: -50px;
+      left: -94px;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &::before {
+        content: "";
+        width: 330px;
+        height: 330px;
+        border-radius: 50%;
+        background-color: global.$secondary;
+        position: absolute;
+        top: calc(50% - 165px);
+        left: calc(50% - 156px);
+        z-index: -2;
+      }
+
+      &::after {
+        content: "";
+        width: 330px;
+        height: 330px;
+        position: absolute;
+        background-image: url(../../assets/images/card-figure.svg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        top: calc(50% - 158px);
+        left: calc(50% - 222px);
+        z-index: -1;
+      }
+
+      & > img {
+        max-width: 457px;
+        max-height: 320px;
+      }
+    }
+
+    &content {
+      padding: 0 40px 56px;
+    }
+  }
+}

@@ -7,8 +7,15 @@
     text-align: center;
   }
 
+  & h2 {
+    text-align: center;
+    font-size: 72px;
+    font-weight: normal;
+    margin-top: 400px;
+  }
+
   &__ {
-    &buy-button {
+    &book-button {
       text-align: center;
       margin-top: 40px;
     }
@@ -22,7 +29,7 @@
           font-size: 40px;
           font-weight: bold;
         }
-        
+
         &:nth-child(2) {
           font-size: 32px;
         }
@@ -32,6 +39,22 @@
     &timer {
       text-align: center;
       margin-top: 40px;
+    }
+
+    &card-content {
+      font-size: 40px;
+      line-height: 60px;
+    }
+
+    &cards {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 110px;
+
+      & > * + * {
+        margin-right: 50px;
+      }
     }
   }
 }
