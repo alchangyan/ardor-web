@@ -3,26 +3,29 @@
 $cardWidth: 692px;
 $cardHeight: 640px;
 
+$winnerCardWidth: 490px;
+$winnerCardHeight: 490px;
+
 .card {
-  border-radius: 52px;
-  border: 5px solid #fff;
-  width: $cardWidth;
-  height: $cardHeight;
-  box-sizing: border-box;
-  position: relative;
+  display: inline-flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: $cardWidth + 84px;
+  height: $cardHeight + 84px;
 
   &__ {
     &wrapper {
-      display: inline-flex;
-      justify-content: end;
-      align-items: end;
-      width: $cardWidth + 84px;
-      height: $cardHeight + 84px;
+      border-radius: 52px;
+      border: 5px solid #fff;
+      width: $cardWidth;
+      height: $cardHeight;
+      box-sizing: border-box;
+      position: relative;
     }
 
     &title {
       display: flex;
-      align-items: start;
+      align-items: flex-start;
       justify-content: center;
       height: 270px;
       padding: 45px;
@@ -81,6 +84,45 @@ $cardHeight: 640px;
 
     &content {
       padding: 0 40px 56px;
+    }
+  }
+
+  &_winner {
+    width: $winnerCardWidth;
+    height: $winnerCardHeight;
+
+    & .card__ {
+      &wrapper {
+        width: $winnerCardWidth;
+        height: $winnerCardHeight;
+      }
+
+      &title {
+        &-text {
+          margin-left: calc(50% + 35px);
+          width: 100%;
+          font-size: 48px;
+          line-height: 1.5;
+          letter-spacing: 0.96px;
+          text-align: start;
+        }
+      }
+
+      &image {
+        width: 208px;
+        top: -4px;
+        left: -4px;
+
+        &::before {
+          display: none;
+        }
+
+        &::after {
+          background-image: url(../../assets/images/winner-card-background.svg);
+          top: -60px;
+          left: -44px;
+        }
+      }
     }
   }
 }

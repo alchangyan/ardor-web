@@ -1,6 +1,6 @@
 @use "../../scss/global";
 
-.footer {
+.footer-top {
   width: 100vw;
   height: 720px;
   box-sizing: border-box;
@@ -65,9 +65,48 @@
 
         & img {
           width: 105px;
-
         }
       }
     }
   }
 }
+
+.footer-bottom {
+  background-color: #F8D1C3;
+
+  &__ {
+    &wrapper {
+      width: 1520px;
+      height: 84px;
+      margin: 0 auto;
+      box-sizing: border-box;
+      color: #252525;
+      font-size: 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      & > div {
+        width: 50%;
+
+        &:nth-child(2) {
+          display: flex;
+          justify-content: flex-end;
+        }
+      }
+    }
+
+
+    &modal-button {
+      cursor: pointer;
+      display: inline-block;
+      white-space: nowrap;
+      margin-left: 70px;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+

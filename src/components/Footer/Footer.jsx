@@ -20,23 +20,34 @@ const mediaIcons = [
 
 function Footer() {
   return (
-    <footer className="footer">
-      <div className="footer__background">
-        <img src={circleImg} alt="footer background" />
-        <img src={figure1Img} alt="footer background" />
-        <img src={figure2Img} alt="footer background" />
-      </div>
-      <div className="footer__logo">
-        <img src={logoImg} alt="logo" />
-      </div>
-      <div className="footer__social-media-links">
-      {mediaIcons.map((img, i) => (
-        <a key={i} href="https://google.com" rel="noreferrer" target="_blank">
-          <img src={img} alt="icon" />
-        </a>
-      ))}
-      </div>
-    </footer>
+    <>
+      <footer className="footer-top">
+        <div className="footer-top__background">
+          <img src={circleImg} alt="footer background" />
+          <img src={figure1Img} alt="footer background" />
+          <img src={figure2Img} alt="footer background" />
+        </div>
+        <div className="footer-top__logo">
+          <img src={logoImg} alt="logo" />
+        </div>
+        <div className="footer-top__social-media-links">
+        {mediaIcons.map((img, i) => (
+          <a key={i} href="https://google.com" rel="noreferrer" target="_blank">
+            <img src={img} alt="icon" />
+          </a>
+        ))}
+        </div>
+      </footer>
+      <footer className="footer-bottom">
+        <div className="footer-bottom__wrapper">
+          <div>© ARDOR PROPERTIES 2023. All rights reserved</div>
+          <div>
+            <div className="footer-bottom__modal-button">Privacy Policy</div>
+            <div className="footer-bottom__modal-button">Terms and Conditions</div>
+          </div>
+        </div>
+      </footer>
+    </>
   );
 }
 

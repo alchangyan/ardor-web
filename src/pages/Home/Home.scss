@@ -1,3 +1,13 @@
+@import "../../scss/global";
+
+%block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 110px auto 0;
+  width: 1520px;
+}
+
 .home {
   & > h1 {
     font-weight: 400;
@@ -12,12 +22,42 @@
     font-size: 72px;
     font-weight: normal;
     margin-top: 400px;
+    letter-spacing: 2px;
+    line-height: 1.28;
   }
 
   &__ {
     &book-button {
       text-align: center;
       margin-top: 40px;
+    }
+
+    &buy-ticket-button {
+      text-align: center;
+      margin-top: 260px;
+      position: relative;
+
+      &::after,
+      &::before {
+        content: "";
+        position: absolute;
+        top: -30px;
+        left: calc(50% + 304px);
+      }
+
+      &::before {
+        width: 200px;
+        height: 168px;
+        background-image: url("../../assets/images/arrow.png");
+        left: calc(50% + 250px);
+        top: 20px;
+      }
+
+      &::after {
+        width: 330px;
+        height: 100px;
+        background-image: url("../../assets/images/try-your-luck.png");
+      }
     }
 
     &next-draw {
@@ -44,16 +84,63 @@
     &card-content {
       font-size: 40px;
       line-height: 60px;
+
+      &.winner {
+        font-size: 32px;
+        line-height: 36px;
+      }
     }
 
     &cards {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-top: 110px;
+      @extend %block;
 
-      & > * + * {
+      &.winners {
+        justify-content: space-between;
+      }
+
+      &:not(.winners) > * + * {
         margin-right: 50px;
+      }
+    }
+
+    &accordion {
+      text-align: center;
+      margin-top: 120px;
+    }
+
+    &modal-button-wrapper {
+      @extend %block;
+      margin-bottom: 180px;
+
+      & .home__winners-button {
+        font-size: 48px;
+        color: $secondary;
+        font-weight: bold;
+        letter-spacing: 1px;
+        padding: 16px 0;
+        border-radius: 30px;
+        border: 5px solid #fff;
+        width: 429px;
+        height: 108px;
+        text-align: center;
+        box-sizing: border-box;
+        cursor: pointer;
+      }
+    }
+
+    &winner-content {
+      & div {
+        & + div {
+          margin-top: 24px;
+        }
+
+        span:nth-child(1) {
+          display: inline-block;
+          margin-right: 16px;
+          color: $secondary;
+          font-size: 32px;
+          font-weight: 800;
+        }
       }
     }
   }

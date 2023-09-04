@@ -1,9 +1,13 @@
+import cn from 'classnames';
+
 import "./Card.scss";
 
-function Card({ image, title, children }) {
+function Card({ image, title, type, children }) {
   return (
-    <div className="card__wrapper">
-      <div className="card">
+    <div className={cn("card", {
+      card_winner: type === 'winner'
+    })}>
+      <div className="card__wrapper">
         <div className="card__image">
           {image && <img src={image} alt="card background" />}
         </div>

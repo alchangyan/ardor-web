@@ -3,6 +3,7 @@ import { format } from "date-fns";
 import CountdownTimer from "../../components/CountdownTimer";
 import CTAButton from "../../components/CTAButton";
 import Card from "../../components/Card";
+import Accordion from "../../components/Accordion";
 
 import goldImg from "../../assets/images/gold.png";
 import houseImg from "../../assets/images/house.png";
@@ -15,6 +16,23 @@ import "./Home.scss";
 
 const cardText =
   "Lorem ipsum dolor sit amet consectetur. Duis sit eget malesuada viverra massa ut. Dapibus scelerisque id molestie quis enim dui";
+
+const winnerCardContent = (
+  <div className="home__winner-content">
+    <div>
+      <span>Where:</span>
+      <span>Abu Dhabi</span>
+    </div>
+    <div>
+      <span>When:</span>
+      <span>March 07/2023</span>
+    </div>
+    <div>
+      <span>What:</span>
+      <span>$150.000.000</span>
+    </div>
+  </div>
+);
 
 function Home() {
   const nextDraw = 1692708117759;
@@ -54,6 +72,34 @@ function Home() {
           <Card image={goldImg} title="Money">
             <div className="home__card-content">{cardText}</div>
           </Card>
+        </div>
+        <div className="home__buy-ticket-button">
+          <CTAButton text="Buy a Ticket" />
+        </div>
+        <h2>
+          Frequently Asked <br />
+          <b>Questions</b>
+        </h2>
+        <div className="home__accordion">
+          <Accordion />
+        </div>
+        <h2>
+          Our <br />
+          <b>Winners</b>
+        </h2>
+        <div className="home__cards winners">
+          <Card image={winner1Img} type="winner" title="Anna Williams">
+            <div className="home__card-content winner">{winnerCardContent}</div>
+          </Card>
+          <Card image={winner2Img} type="winner" title="Anna Williams">
+            <div className="home__card-content winner">{winnerCardContent}</div>
+          </Card>
+          <Card image={winner3Img} type="winner" title="Anna Williams">
+            <div className="home__card-content winner">{winnerCardContent}</div>
+          </Card>
+        </div>
+        <div className="home__modal-button-wrapper">
+          <div className="home__winners-button">More Winners</div>
         </div>
       </section>
     </main>
