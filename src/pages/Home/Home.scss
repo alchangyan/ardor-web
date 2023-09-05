@@ -27,6 +27,14 @@
   }
 
   &__ {
+    &more-details-button {
+      position: absolute;
+      left: 380px;
+      bottom: 112px;
+      cursor: pointer;
+      animation: rotating 20s linear infinite;
+    }
+
     &book-button {
       text-align: center;
       margin-top: 40px;
@@ -143,5 +151,19 @@
         }
       }
     }
+  }
+}
+
+
+@keyframes rotating {
+  from {
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }

@@ -4,6 +4,8 @@ import CountdownTimer from "../../components/CountdownTimer";
 import CTAButton from "../../components/CTAButton";
 import Card from "../../components/Card";
 import Accordion from "../../components/Accordion";
+import Modal from "../../components/Modal";
+import MoreDetailsModalContent from "../../components/MoreDetailsModalContent";
 
 import goldImg from "../../assets/images/gold.png";
 import houseImg from "../../assets/images/house.png";
@@ -11,8 +13,10 @@ import phoneImg from "../../assets/images/phone.png";
 import winner1Img from "../../assets/images/temp/winner 1.png";
 import winner2Img from "../../assets/images/temp/winner 2.png";
 import winner3Img from "../../assets/images/temp/winner 3.png";
+import moreDetailsEn from "../../assets/images/more-details-en.svg";
 
 import "./Home.scss";
+import { useCallback, useState } from "react";
 
 const cardText =
   "Lorem ipsum dolor sit amet consectetur. Duis sit eget malesuada viverra massa ut. Dapibus scelerisque id molestie quis enim dui";
@@ -34,11 +38,46 @@ const winnerCardContent = (
   </div>
 );
 
+const ioFn = (prevState) => !prevState;
+
 function Home() {
+  const [isMoreDetailsModalOpen, setIsMoreDetailsModalOpen] = useState(false);
+  const [isWinnersModalOpen, setIsWinnersModalOpen] = useState(false);
+
+  const toggleOpenModal = useCallback((e) => {
+    const { modalId } = e.currentTarget.dataset;
+
+    switch (modalId) {
+      case "winners":
+        setIsWinnersModalOpen(ioFn);
+        break;
+      case "more-details":
+        setIsMoreDetailsModalOpen(ioFn);
+        break;
+
+      default:
+        setIsMoreDetailsModalOpen(false);
+        setIsWinnersModalOpen(false);
+        break;
+    }
+  }, []);
+
   const nextDraw = 1692708117759;
 
   return (
     <main className="home">
+      <Modal open={isMoreDetailsModalOpen} onClose={toggleOpenModal}>
+        <MoreDetailsModalContent />
+      </Modal>
+      <Modal open={isWinnersModalOpen} onClose={toggleOpenModal} />
+
+      <img
+        className="home__more-details-button"
+        src={moreDetailsEn}
+        alt="more details button"
+        data-modal-id="more-details"
+        onClick={toggleOpenModal}
+      />
       <h1>
         Get a <b>unique chance</b> of <b>winning a luxury villa</b>
         <br />
@@ -99,7 +138,13 @@ function Home() {
           </Card>
         </div>
         <div className="home__modal-button-wrapper">
-          <div className="home__winners-button">More Winners</div>
+          <div
+            className="home__winners-button"
+            data-modal-id="winners"
+            onClick={toggleOpenModal}
+          >
+            More Winners
+          </div>
         </div>
       </section>
     </main>

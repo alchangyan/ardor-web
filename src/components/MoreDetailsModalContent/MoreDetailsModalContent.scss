@@ -1,0 +1,110 @@
+.more-details-content {
+  display: flex;
+  justify-content: center;
+
+  &__ {
+    &images {
+      width: 810px;
+      margin: 80px 24px 78px 100px;
+      position: relative;
+
+      &-background {
+        z-index: -1;
+        position: relative;
+
+        & > img {
+          position: absolute;
+
+          // background figure 1
+          &:nth-child(1) {
+            top: 546px;
+            left: -60px;
+          }
+          
+          // circle blue
+          &:nth-child(2) {
+            top: 404px;
+            left: -60px;
+          }
+
+          // background figure 2
+          &:nth-child(3) {
+            right: -24px;
+            top: -70px;
+          }
+
+          // circle orange
+          &:nth-child(4) {
+            right: -56px;
+            top: -36px;
+          }
+
+          // lines
+          &:nth-child(5) {
+            right: -120px;
+            top: -64px;
+          }
+        }
+      }
+    }
+
+    &main-image {
+      z-index: 1;
+      width: 810px;
+      height: 644px;
+      border-radius: 20px;
+      border: 2px solid #fff;
+      position: relative;
+      background-size: cover;
+      background-position: center center;
+
+      & > img {
+        position: absolute;
+        top: -48px;
+        left: -44px;
+      }
+    }
+
+    &thumbnails {
+      margin-top: 23px;
+      display: flex;
+      justify-content: space-between;
+      
+      & > div {
+        background-size: cover;
+        background-position: center center;
+        border-radius: 20px;
+        border: 2px solid #fff;
+        width: 174px;
+        height: 174px;
+      }
+    }
+
+    &description {
+      margin-right: 24px;
+    }
+
+    &title {
+      margin-top: 80px;
+      font-family: Gilroy;
+      font-size: 40px;
+      font-weight: bold;
+      line-height: 1.2;
+      letter-spacing: 1px;
+    }
+
+    &subtitle {
+      font-size: 32px;
+      font-weight: bold;
+      line-height: 1.5; /* 150% */
+      letter-spacing: 1px;
+      margin-top: 16px;
+    }
+
+    &text {
+      font-size: 24px;
+      line-height: 1.5; /* 150% */
+      letter-spacing: 1px;
+    }
+  }
+}
