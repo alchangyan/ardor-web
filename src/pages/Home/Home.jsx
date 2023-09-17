@@ -1,4 +1,5 @@
 import { format } from "date-fns";
+import { Link } from "react-router-dom";
 
 import CountdownTimer from "../../components/CountdownTimer";
 import CTAButton from "../../components/CTAButton";
@@ -13,7 +14,7 @@ import phoneImg from "../../assets/images/phone.png";
 import winner1Img from "../../assets/images/temp/winner 1.png";
 import winner2Img from "../../assets/images/temp/winner 2.png";
 import winner3Img from "../../assets/images/temp/winner 3.png";
-import moreDetailsEn from "../../assets/images/more-details-en.svg";
+import moreDetailsEn from "../../assets/images/more-details-en.jpg";
 
 import "./Home.scss";
 import { useCallback, useState } from "react";
@@ -69,8 +70,31 @@ function Home() {
       <Modal open={isMoreDetailsModalOpen} onClose={toggleOpenModal}>
         <MoreDetailsModalContent />
       </Modal>
-      <Modal open={isWinnersModalOpen} onClose={toggleOpenModal} />
-
+      <Modal open={isWinnersModalOpen} onClose={toggleOpenModal}>
+        <div className="home__winners-modal-content scrollbar">
+          <h1>
+            Our
+            <br />
+            <b>Winners</b>
+          </h1>
+          <div className="home__winners-modal-list">
+            {Array(10)
+              .fill(true)
+              .map((_, i) => (
+                <Card
+                  key={i}
+                  image={winner1Img}
+                  type="winner"
+                  title="Anna Williams"
+                >
+                  <div className="home__card-content winner">
+                    {winnerCardContent}
+                  </div>
+                </Card>
+              ))}
+          </div>
+        </div>
+      </Modal>
       <img
         className="home__more-details-button"
         src={moreDetailsEn}
@@ -84,7 +108,9 @@ function Home() {
         by booking a consultancy.
       </h1>
       <div className="home__book-button">
-        <CTAButton text="Book Now" />
+        <Link to="buy-a-ticket">
+          <CTAButton text="Book Now" />
+        </Link>
       </div>
       <section className="home__next-draw">
         <div>Next Draw:</div>
@@ -113,7 +139,9 @@ function Home() {
           </Card>
         </div>
         <div className="home__buy-ticket-button">
-          <CTAButton text="Buy a Ticket" />
+          <Link to="buy-a-ticket">
+            <CTAButton text="Buy a Ticket" />
+          </Link>
         </div>
         <h2>
           Frequently Asked <br />

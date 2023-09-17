@@ -3,12 +3,16 @@ import Footer from "../Footer";
 import Header from "../Header";
 import Background from "../Background";
 
-function Layout() {
+import "./Layout.scss";
+
+function Layout({secondary = false}) {
   return (
-    <div>
-      <Background />
+    <div className="layout">
+      <Background secondary={secondary} />
       <Header />
-      <Outlet />
+      <div className="layout__content">
+        <Outlet />
+      </div>
       <Footer />
     </div>
   );

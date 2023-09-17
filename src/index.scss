@@ -1,12 +1,43 @@
-@use "./scss/global";
+@import "./scss/global";
 
 body {
   margin: 0;
-  background-color: global.$primary;
+  background-color: $primary;
   color: #fff;
   font-family: Gilroy;
   max-width: 100vw;
   overflow-x: hidden;
+}
+
+h1 {
+  font-weight: normal;
+  font-size: 80px;
+  width: 1000px;
+  text-align: center;
+  margin: 0;
+}
+
+h2 {
+  text-align: center;
+  font-size: 72px;
+  font-weight: normal;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+.scrollbar {
+  &::-webkit-scrollbar-thumb {
+    background: #0E1449;
+    border-radius: 5px;
+  }
+
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
 }
 
 @font-face {

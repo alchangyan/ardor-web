@@ -1,4 +1,4 @@
-@use "../../scss/global";
+@import "../../scss/global";
 
 .header {
   height: 100px;
@@ -24,7 +24,7 @@
 
       & > div:first-child {
         font-weight: bold;
-        color: global.$secondary;
+        color: $secondary;
         width: 168px;
         margin: 0 34px;
         font-size: 24px;

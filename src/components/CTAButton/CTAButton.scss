@@ -1,4 +1,4 @@
-@use "../../scss/global";
+@import "../../scss/global";
 
 .cta-button {
   box-sizing: border-box;
@@ -9,6 +9,7 @@
   min-width: 450px;
   position: relative;
   cursor: pointer;
+  color: #fff;
 
   &__ {
     &content {
@@ -34,7 +35,7 @@
       border-radius: 50%;
       
       &:nth-child(even) {
-        background-color: global.$secondary;
+        background-color: $secondary;
         animation: call-to-action 1s steps(2, jump-none) 0s infinite;
       }
       
@@ -222,7 +223,7 @@
 
 @keyframes call-to-action {
   0% {
-    background-color: global.$secondary;
+    background-color: $secondary;
   }
 
   100% {

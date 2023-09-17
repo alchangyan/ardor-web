@@ -1,4 +1,4 @@
-@use "../../scss/global";
+@import "../../scss/global";
 
 .countdown-timer {
   display: inline-flex;
@@ -18,7 +18,7 @@
       width: 90px;
       height: 90px;
       border-radius: 14px;
-      background-color: global.$secondary;
+      background-color: $secondary;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -30,7 +30,7 @@
     &text {
       box-sizing: border-box;
       border-radius: 14px;
-      border: 1px solid global.$secondary;
+      border: 1px solid $secondary;
       height: 60px;
       display: flex;
       justify-content: center;

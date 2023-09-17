@@ -16,20 +16,20 @@ import lotteryImg from "../../assets/images/background-set/lottery.png";
 // Styles
 import "./Background.scss";
 
-function Background() {
+function Background({secondary}) {
   return (
     <div className="background">
-      <img className="background__left3" src={left3Img} alt="background" />
+      {!secondary && <img className="background__left3" src={left3Img} alt="background" />}
       <img className="background__left2" src={left2Img} alt="background" />
       <img className="background__left1" src={left1Img} alt="background" />
-      <img className="background__leftLineBlack" src={leftLineBlackImg} alt="background" />
+      {!secondary && <img className="background__leftLineBlack" src={leftLineBlackImg} alt="background" />}
       <img className="background__leftLineWhite" src={leftLineWhiteImg} alt="background" />
-      <img className="background__house" src={houseImg} alt="background" />
-      <img className="background__right2" src={right2Img} alt="background" />
-      <img className="background__right1" src={right1Img} alt="background" />
-      <img className="background__rightLineWhite" src={rightLineWhiteImg} alt="background" />
-      <img className="background__lottery" src={lotteryImg} alt="background" />
-      <img className="background__tickets" src={ticketsImg} alt="background" />
+      {!secondary && <img className="background__house" src={houseImg} alt="background" />}
+      {!secondary && <img className="background__right2" src={right2Img} alt="background" />}
+      {!secondary && <img className="background__right1" src={right1Img} alt="background" />}
+      {!secondary && <img className="background__rightLineWhite" src={rightLineWhiteImg} alt="background" />}
+      {!secondary && <img className="background__lottery" src={lotteryImg} alt="background" />}
+      {!secondary && <img className="background__tickets" src={ticketsImg} alt="background" />}
     </div>
   );
 }
