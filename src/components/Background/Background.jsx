@@ -12,6 +12,7 @@ import rightLineWhiteImg from "../../assets/images/background-set/right-line-whi
 import houseImg from "../../assets/images/background-set/house.png";
 import ticketsImg from "../../assets/images/background-set/tickets.png";
 import lotteryImg from "../../assets/images/background-set/lottery.png";
+import secondaryLeftFigureImg from "../../assets/images/background-set/secondary-left-figure.svg";
 
 // Styles
 import "./Background.scss";
@@ -20,7 +21,8 @@ function Background({secondary}) {
   return (
     <div className="background">
       {!secondary && <img className="background__left3" src={left3Img} alt="background" />}
-      <img className="background__left2" src={left2Img} alt="background" />
+      {secondary && <img className="background__left4" src={secondaryLeftFigureImg} alt="background" />}
+      {!secondary && <img className="background__left2" src={left2Img} alt="background" />}
       <img className="background__left1" src={left1Img} alt="background" />
       {!secondary && <img className="background__leftLineBlack" src={leftLineBlackImg} alt="background" />}
       <img className="background__leftLineWhite" src={leftLineWhiteImg} alt="background" />

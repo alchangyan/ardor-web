@@ -27,27 +27,69 @@ h2 {
 
 .scrollbar {
   &::-webkit-scrollbar-thumb {
-    background: #0E1449;
+    background: #0e1449;
     border-radius: 5px;
   }
 
   &::-webkit-scrollbar {
     width: 8px;
   }
-  
+
   &::-webkit-scrollbar-track {
     background: transparent;
   }
 }
 
+.light-button {
+  font-size: 48px;
+  color: $secondary;
+  font-weight: bold;
+  letter-spacing: 1px;
+  padding: 16px 0;
+  border-radius: 30px;
+  border: 5px solid #fff;
+  width: 429px;
+  height: 108px;
+  text-align: center;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.back-button {
+  font-size: 40px;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  cursor: pointer;
+  color: #fff;
+  text-decoration: none;
+
+  & svg {
+    margin-right: 24px;
+
+    & path {
+      stroke: #fff;
+    }
+  }
+
+  &:hover {
+    & svg {
+      & path {
+        stroke: $secondary;
+      }
+    }
+  }
+}
+
 @font-face {
   font-family: Gilroy;
-  src: url('./assets/fonts/Gilroy-Light.otf') format("opentype");
+  src: url("./assets/fonts/Gilroy-Light.otf") format("opentype");
   font-weight: normal;
 }
 
 @font-face {
   font-family: Gilroy;
-  src: url('./assets/fonts/Gilroy-ExtraBold.otf') format("opentype");
+  src: url("./assets/fonts/Gilroy-ExtraBold.otf") format("opentype");
   font-weight: bold;
 }

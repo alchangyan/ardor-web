@@ -167,7 +167,7 @@ function Home() {
         </div>
         <div className="home__modal-button-wrapper">
           <div
-            className="home__winners-button"
+            className="light-button"
             data-modal-id="winners"
             onClick={toggleOpenModal}
           >

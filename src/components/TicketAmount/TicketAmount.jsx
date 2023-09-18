@@ -1,4 +1,6 @@
 import { useState, useCallback } from "react";
+import Form from "../Form";
+
 import "./TicketAmount.scss";
 
 const price = 29;
@@ -6,25 +8,28 @@ const price = 29;
 function TicketAmount() {
   const [amount, setAmount] = useState(1);
 
-  const changeAmount = useCallback((e) => {
-    const { type } = e.target.dataset;
+  const changeAmount = useCallback(
+    (e) => {
+      const { type } = e.target.dataset;
 
-    switch (type) {
-      case "increment":
-        if (amount < 99) {
-          setAmount((prevState) => ++prevState);
-        }
-        break;
-      case "decrement":
-        if (amount > 1) {
-          setAmount((prevState) => --prevState);
-        }
-        break;
+      switch (type) {
+        case "increment":
+          if (amount < 99) {
+            setAmount((prevState) => ++prevState);
+          }
+          break;
+        case "decrement":
+          if (amount > 1) {
+            setAmount((prevState) => --prevState);
+          }
+          break;
 
-      default:
-        break;
-    }
-  }, [amount]);
+        default:
+          break;
+      }
+    },
+    [amount]
+  );
 
   return (
     <div className="ticket-amount">
@@ -42,6 +47,7 @@ function TicketAmount() {
         />
       </div>
       <div className="ticket-amount__price">{price * amount}AED</div>
+      <Form />
     </div>
   );
 }
