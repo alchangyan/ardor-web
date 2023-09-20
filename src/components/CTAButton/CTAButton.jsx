@@ -5,11 +5,16 @@ import "./CTAButton.scss";
 const circleQuantity = 40;
 const circles = Array(circleQuantity).fill("");
 
-function CTAButton({text}) {
+function CTAButton({ text, onClick = () => {}, disabled = false }) {
   return (
-    <div className="cta-button">
+    <div
+      className={cn("cta-button", {
+        "cta-button_disabled": disabled,
+      })}
+      onClick={disabled ? () => {} : onClick}
+    >
       <div className="cta-button__circles">
-        {circles.map((el, i) => (
+        {circles.map((_, i) => (
           <i
             key={i}
             className={cn("cta-button__circle", {

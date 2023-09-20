@@ -149,6 +149,11 @@
         }
       }
     }
+
+    &modal-button-wrapper {
+      @extend %block;
+      margin-bottom: 200px
+    }
   }
 }
 

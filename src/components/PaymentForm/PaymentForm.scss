@@ -1,0 +1,56 @@
+@import "../../scss/global";
+
+.payment-form {
+  width: 1000px;
+  margin: 100px auto 0;
+
+  & .back-button {
+    margin-bottom: 40px;
+  }
+
+}
+
+.payment-methods {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.payment-method {
+  border: 8px solid #fff;
+  border-radius: 30px;
+  width: 320px;
+  height: 260px;
+  background-color: #fff;
+  box-sizing: border-box;
+  cursor: pointer;
+
+  &__ {
+    &title {
+      color: #2331B6;
+      font-size: 40px;
+      font-weight: bold;
+      text-transform: capitalize;
+      text-align: center;
+      margin-top: 16px;
+      margin-bottom: 36px;
+    }
+
+    &image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &_selected {
+    border-color: $secondary;
+  }
+}
+
+.payment-submit-button {
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+}

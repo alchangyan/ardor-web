@@ -1,11 +1,10 @@
 import { useState, useCallback } from "react";
-import Form from "../Form";
 
 import "./TicketAmount.scss";
 
 const price = 29;
 
-function TicketAmount() {
+function TicketAmount({ fixed = false }) {
   const [amount, setAmount] = useState(1);
 
   const changeAmount = useCallback(
@@ -34,20 +33,23 @@ function TicketAmount() {
   return (
     <div className="ticket-amount">
       <div className="ticket-amount__selection">
-        <div
-          className="ticket-amount__minus-button"
-          data-type="decrement"
-          onClick={changeAmount}
-        />
+        {!fixed && (
+          <div
+            className="ticket-amount__minus-button"
+            data-type="decrement"
+            onClick={changeAmount}
+          />
+        )}
         <div className="ticket-amount__amount">{amount}</div>
-        <div
-          className="ticket-amount__plus-button"
-          data-type="increment"
-          onClick={changeAmount}
-        />
+        {!fixed && (
+          <div
+            className="ticket-amount__plus-button"
+            data-type="increment"
+            onClick={changeAmount}
+          />
+        )}
       </div>
       <div className="ticket-amount__price">{price * amount}AED</div>
-      <Form />
     </div>
   );
 }

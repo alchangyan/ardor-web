@@ -219,6 +219,11 @@
       }
     }
   }
+
+  &_disabled {
+    cursor: default;
+    opacity: 0.2;
+  }
 }
 
 @keyframes call-to-action {

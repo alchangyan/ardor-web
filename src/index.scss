@@ -58,7 +58,7 @@ h2 {
 .back-button {
   font-size: 40px;
   letter-spacing: 1px;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: flex-start;
   cursor: pointer;
@@ -80,6 +80,10 @@ h2 {
       }
     }
   }
+}
+
+::selection {
+  background-color: rgba($color: $secondary, $alpha: 0.4);
 }
 
 @font-face {

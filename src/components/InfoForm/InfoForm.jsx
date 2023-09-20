@@ -1,7 +1,9 @@
 import { useCallback, useMemo, useState } from "react";
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from "react-router-dom";
+
 import Input from "../Input";
-import "./Form.scss";
+
+import "./InfoForm.scss";
 
 const emailRegExp = /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/;
 
@@ -65,7 +67,7 @@ function validate(name, value) {
   };
 }
 
-function Form() {
+function InfoForm() {
   const navigate = useNavigate();
   const [formData, setFormData] = useState(initialState);
 
@@ -79,20 +81,17 @@ function Form() {
   const handleSubmit = useCallback(() => {
     let error = false;
 
-    const updatedState = Object.entries(formData).reduce(
-      (acc, [key, data]) => {
-        const newValue = validate(key, data.value);
+    const updatedState = Object.entries(formData).reduce((acc, [key, data]) => {
+      const newValue = validate(key, data.value);
 
-        if (newValue.err !== null) {
-          error = true;
-        }
+      if (newValue.err !== null) {
+        error = true;
+      }
 
-        acc[key] = newValue;
+      acc[key] = newValue;
 
-        return acc;
-      },
-      {}
-    );
+      return acc;
+    }, {});
 
     if (error) {
       setFormData(updatedState);
@@ -111,7 +110,7 @@ function Form() {
   );
 
   return (
-    <div className="form">
+    <div className="info-form">
       <Input label="Name*" name="name" onChange={handleChange} />
       <Input label="Surname*" name="surname" onChange={handleChange} />
       <Input label="Email*" name="email" onChange={handleChange} />
@@ -151,4 +150,4 @@ function Form() {
   );
 }
 
-export default Form;
+export default InfoForm;

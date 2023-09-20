@@ -5,6 +5,7 @@ import left1Img from "../../assets/images/background-set/left-1.svg";
 import left2Img from "../../assets/images/background-set/left-2.svg";
 import left3Img from "../../assets/images/background-set/left-3.svg";
 import leftLineBlackImg from "../../assets/images/background-set/left-line-black.svg";
+import leftLineBlackSecondaryImg from "../../assets/images/background-set/left-line-black-secondary.svg";
 import leftLineWhiteImg from "../../assets/images/background-set/left-line-white.svg";
 import right1Img from "../../assets/images/background-set/right-1.svg";
 import right2Img from "../../assets/images/background-set/right-2.svg";
@@ -25,7 +26,8 @@ function Background({secondary}) {
       {!secondary && <img className="background__left2" src={left2Img} alt="background" />}
       <img className="background__left1" src={left1Img} alt="background" />
       {!secondary && <img className="background__leftLineBlack" src={leftLineBlackImg} alt="background" />}
-      <img className="background__leftLineWhite" src={leftLineWhiteImg} alt="background" />
+      {!secondary && <img className="background__leftLineWhite" src={leftLineWhiteImg} alt="background" />}
+      {secondary && <img className="background__leftLineBlackSecondary" src={leftLineBlackSecondaryImg} alt="background" />}
       {!secondary && <img className="background__house" src={houseImg} alt="background" />}
       {!secondary && <img className="background__right2" src={right2Img} alt="background" />}
       {!secondary && <img className="background__right1" src={right1Img} alt="background" />}

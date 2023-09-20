@@ -1,0 +1,38 @@
+@import "../../scss/global";
+
+.payment {
+  width: 1240px;
+  margin: 290px auto 0;
+
+  & h3 {
+    color: $secondary;
+    font-size: 104px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-align: center;
+    margin: 0 0 24px;
+  }
+
+  & p {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 300;
+    margin: 0;
+    letter-spacing: 1px;
+  }
+
+  &__ {
+    &homepage-button-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 110px auto 0;
+      width: 100%;
+      margin-bottom: 200px;
+
+      & * {
+        text-decoration: none;
+      }
+    }
+  }
+}
