@@ -14,15 +14,15 @@
     // &left1 {}
 
     // &left2 {}
-    
+
     &left3 {
-      bottom: 0;
+      top: 400px;
     }
 
     // &left4 {}
-    
+
     &leftLineBlack {
-      bottom: 116px;
+      top: 690px;
     }
 
     &leftLineBlackSecondary {
@@ -34,23 +34,22 @@
     }
 
     &house {
-      bottom: 178px;
+      top: 230px;
     }
 
     &right1 {
       right: 0;
-      bottom: 0;
-    }
-    
-    &right2 {
-      right: 0;
-      bottom: 0;
-    }
-    
-    &rightLineWhite {
-      right: 0;
+      top: 456px;
     }
 
+    &right2 {
+      right: 0;
+      top: 276px;
+    }
+
+    &rightLineWhite {
+      right: 16px;
+    }
 
     &tickets {
       top: 160px;
@@ -58,8 +57,8 @@
     }
 
     &lottery {
-      right: 0;
-      bottom: 0;
+      right: 12px;
+      top: 550px;
     }
   }
 }
