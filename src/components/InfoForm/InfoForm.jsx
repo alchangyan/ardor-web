@@ -1,5 +1,5 @@
-import { useCallback, useMemo, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useCallback, useEffect, useMemo, useState } from "react";
+import { Link } from "react-router-dom";
 
 import Input from "../Input";
 
@@ -67,8 +67,7 @@ function validate(name, value) {
   };
 }
 
-function InfoForm() {
-  const navigate = useNavigate();
+function InfoForm({ onSubmit }) {
   const [formData, setFormData] = useState(initialState);
 
   const handleChange = useCallback((name, value) => {
@@ -96,10 +95,33 @@ function InfoForm() {
     if (error) {
       setFormData(updatedState);
     } else {
-      // save to local storage
-      navigate("/payment");
+      const cleanData = Object.keys(formData).reduce((acc, key) => {
+        acc[key] = formData[key].value;
+
+        return acc;
+      }, {});
+
+      onSubmit(cleanData);
     }
-  }, [formData, navigate]);
+  }, [formData, onSubmit]);
+
+  useEffect(() => {
+    const lsData = localStorage.getItem("data");
+
+    if (lsData) {
+      const data = JSON.parse(lsData);
+      const { tickets, ...rest } = data;
+      const formdata = Object.keys(rest).reduce((acc, key) => {
+        acc[key] = {
+          value: rest[key],
+          err: null
+        }
+        return acc;
+      }, {});
+
+      setFormData(formdata);
+    }
+  }, []);
 
   const errors = useMemo(
     () =>
@@ -111,14 +133,15 @@ function InfoForm() {
 
   return (
     <div className="info-form">
-      <Input label="Name*" name="name" onChange={handleChange} />
-      <Input label="Surname*" name="surname" onChange={handleChange} />
-      <Input label="Email*" name="email" onChange={handleChange} />
+      <Input label="Name*" name="name" value={formData.name.value} onChange={handleChange} />
+      <Input label="Surname*" name="surname" value={formData.surname.value} onChange={handleChange} />
+      <Input label="Email*" name="email" value={formData.email.value} onChange={handleChange} />
       <Input
         label="Phone number*"
         name="phone"
         onChange={handleChange}
         type="number"
+        value={formData.phone.value}
       />
       {errors.length > 0 && errors.map((err, i) => <pre key={i}>{err}</pre>)}
       <div

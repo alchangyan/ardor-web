@@ -1,10 +1,10 @@
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
 
 import "./TicketAmount.scss";
 
 const price = 29;
 
-function TicketAmount({ fixed = false }) {
+function TicketAmount({ fixed = false, onChange }) {
   const [amount, setAmount] = useState(1);
 
   const changeAmount = useCallback(
@@ -29,6 +29,20 @@ function TicketAmount({ fixed = false }) {
     },
     [amount]
   );
+
+  useEffect(() => {
+    onChange && onChange(amount);
+  }, [amount, onChange])
+
+  useEffect(() => {
+    const lsData = localStorage.getItem('data');
+
+    if (lsData) {
+      const data = JSON.parse(lsData)
+      
+      setAmount(data.tickets);
+    }
+  }, [])
 
   return (
     <div className="ticket-amount">

@@ -3,9 +3,8 @@ import cn from "classnames";
 
 import "./Input.scss";
 
-function Input({ label, name, onChange, type = 'text' }) {
+function Input({ label, name, value, onChange, type = 'text' }) {
   const [focused, setFocused] = useState(false);
-  const [value, setValue] = useState("");
 
   const handleFocus = useCallback(() => {
     setFocused(true);
@@ -17,7 +16,6 @@ function Input({ label, name, onChange, type = 'text' }) {
 
   const handleChange = useCallback((e) => {
     const newValue = e.target.value.trim();
-    setValue(newValue);
     onChange(name, newValue);
   }, [name, onChange]);
 

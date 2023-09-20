@@ -1,7 +1,12 @@
 import { Link } from "react-router-dom";
 import "./Success.scss";
+import { useEffect } from "react";
 
 function Success() {
+  useEffect(() => {
+    localStorage.removeItem("data");
+  }, []);
+
   return (
     <div className="payment">
       <h3>Success!</h3>
