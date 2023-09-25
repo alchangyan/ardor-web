@@ -97,3 +97,18 @@ h2 {
   src: url("./assets/fonts/Gilroy-ExtraBold.otf") format("opentype");
   font-weight: bold;
 }
+
+// tablet
+@media (max-width:1024px) {
+  h1 {
+    font-size: 48px;
+  }
+  
+  h2 {
+    font-size: 40px;
+  }
+}
+
+// mobile
+@media (max-width:414px)  {
+}

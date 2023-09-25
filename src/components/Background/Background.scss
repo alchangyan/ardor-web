@@ -48,7 +48,7 @@
     }
 
     &rightLineWhite {
-      right: 16px;
+      right: -20px;
     }
 
     &tickets {
@@ -61,4 +61,62 @@
       top: 550px;
     }
   }
+}
+
+// tablet
+@media (max-width: 1024px) {
+  .background {
+    &__ {
+      &left1 {
+        width: 350px;
+      }
+
+      &left2 {
+        width: 364px;
+      }
+
+      &left3 {
+        width: 274px;
+        top: 360px;
+      }
+
+      // &left4 {}
+
+      &leftLineBlack {
+        width: 200px;
+        top: 512px;
+      }
+
+      &leftLineBlackSecondary {
+      }
+
+      &leftLineWhite {
+        width: 200px;
+        left: 200px;
+      }
+
+      &house {
+        width: 328px;
+      }
+
+      &right1 {
+      }
+
+      &right2 {
+      }
+
+      &rightLineWhite {
+      }
+
+      &tickets {
+      }
+
+      &lottery {
+      }
+    }
+  }
+}
+
+// mobile
+@media (max-width: 414px) {
 }

@@ -7,7 +7,7 @@
   cursor: pointer;
   padding: 0 10px;
   box-sizing: border-box;
-  
+
   &__ {
     &floating-icon {
       position: absolute;
@@ -20,13 +20,13 @@
       background-color: #fff;
       z-index: 1;
     }
-    
+
     &text {
       display: flex;
       align-items: center;
       justify-content: center;
       height: 100%;
-      
+
       & > * {
         font-weight: bold;
         color: #000;
@@ -37,7 +37,7 @@
       }
     }
   }
-  
+
   &_ {
     &eng {
       & .lang-switch__floating-icon {
@@ -52,14 +52,14 @@
         }
       }
     }
-    
+
     &ar {
       & .lang-switch__floating-icon {
         background-image: url(../../assets/images/ar-flag.jpg);
         top: 4px;
         left: calc(100% - 56px);
       }
-      
+
       & .lang-switch__text {
         & > div:nth-child(2) {
           opacity: 0;
@@ -67,4 +67,31 @@
       }
     }
   }
+}
+
+// tablet
+@media (max-width: 1024px) {
+  .lang-switch {
+    width: 128px;
+    height: 48px;
+
+    &__ {
+      &floating-icon {
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    &_ {
+      &ar {
+        & .lang-switch__floating-icon {
+          left: calc(100% - 44px);
+        }
+      }
+    }
+  }
+}
+
+// mobile
+@media (max-width: 414px) {
 }

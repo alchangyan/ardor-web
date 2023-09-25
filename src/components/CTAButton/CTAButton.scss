@@ -235,3 +235,9 @@
     background-color: #fff;
   }
 }
+
+@media (max-width:1024px) {
+  .cta-button {
+    transform: scale(0.6);
+  }
+}

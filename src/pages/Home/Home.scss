@@ -170,3 +170,19 @@
     transform: rotate(360deg);
   }
 }
+
+
+// tablet
+@media (max-width:1024px) {
+  .home {
+    & > h1 {
+      width: 676px;
+      // margin: 245px auto 0;
+    }
+  }
+}
+
+// mobile
+@media (max-width:414px)  {
+
+}

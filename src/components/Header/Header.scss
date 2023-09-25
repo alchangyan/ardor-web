@@ -32,3 +32,31 @@
     }
   }
 }
+
+// tablet
+@media (max-width:1024px) {
+  .header {
+    height: 80px;
+
+    &__ {
+      &logo {
+        & img {
+          width: 56px;
+        }
+      }
+
+      &right-side {
+        & > div:first-child {
+          font-size: 18px;
+          width: 130px;
+          margin: 0 24px;
+        }
+      }
+    }
+  }
+}
+
+// mobile
+@media (max-width:414px)  {
+
+}
