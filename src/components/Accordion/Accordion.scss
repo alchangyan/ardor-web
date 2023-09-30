@@ -1,11 +1,10 @@
-@import '../../scss/global';
+@import "../../scss/global";
 
 .accordion {
   width: 1520px;
   display: inline-block;
-  
+
   &-item {
-    
     &__ {
       &title {
         text-align: left;
@@ -15,9 +14,9 @@
         letter-spacing: 1px;
         cursor: pointer;
         position: relative;
-        
+
         &::after {
-          content: '';
+          content: "";
           transition: 0.3s;
           position: absolute;
           top: calc(50% - 25px);
@@ -25,13 +24,13 @@
           display: inline;
           width: 50px;
           height: 50px;
-          background-image: url('../../assets/images/accordion-arrow.svg');
+          background-image: url("../../assets/images/accordion-arrow.svg");
           background-size: 100%;
           background-repeat: no-repeat;
           background-position: center center;
         }
       }
-      
+
       &content {
         transition: 0.3s;
         text-align: left;
@@ -45,7 +44,7 @@
         padding: 0;
       }
     }
-    
+
     &_opened {
       & .accordion-item__title::after {
         transform: rotate(180deg);
@@ -57,4 +56,36 @@
       }
     }
   }
+}
+
+// tablet
+@media (max-width: 1024px) {
+  .accordion {
+    width: calc(100% - 200px);
+
+    &-item {
+      &__ {
+        &title {
+          font-size: 24px;
+          margin-top: 10px;
+
+          &::after {
+            width: 30px;
+            height: 30px;
+            top: calc(50% - 15px);
+          }
+        }
+
+        &content {
+          border-bottom-width: 3px;
+          font-size: 24px;
+          line-height: 36px;
+        }
+      }
+    }
+  }
+}
+
+// mobile
+@media (max-width: 414px) {
 }

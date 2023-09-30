@@ -2,9 +2,14 @@
 
 $cardWidth: 692px;
 $cardHeight: 640px;
+$cardWidthTablet: 356px;
+$cardHeightTablet: 340px;
 
 $winnerCardWidth: 490px;
 $winnerCardHeight: 490px;
+
+$winnerCardWidthTablet: 256px;
+$winnerCardHeightTablet: 256px;
 
 .card {
   display: inline-flex;
@@ -125,4 +130,102 @@ $winnerCardHeight: 490px;
       }
     }
   }
+}
+
+// tablet
+@media (max-width: 1024px) {
+  .card {
+    display: inline-flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: $cardWidthTablet + 84px;
+    height: $cardHeightTablet + 84px;
+
+    &__ {
+      &wrapper {
+        width: $cardWidthTablet;
+        height: $cardHeightTablet;
+        border-width: 2px;
+      }
+
+      &title {
+        padding: 30px 30px 52px;
+        height: auto;
+
+        &-text {
+          font-size: 32px;
+        }
+      }
+
+      &image {
+        width: 220px;
+        left: -52px;
+        // top: -50px;
+        // left: -94px;
+
+        &::before {
+          width: 170px;
+          height: 170px;
+          top: calc(50% - 80px);
+          left: calc(50% - 80px);
+        }
+
+        &::after {
+          background-size: contain;
+          width: 134px;
+          height: 160px;
+          background-size: contain;
+          top: calc(50% - 70px);
+          left: calc(50% - 90px);
+        }
+
+        & > img {
+          max-width: 220px;
+          max-height: 152px;
+        }
+      }
+
+      &content {
+        padding: 0 20px;
+      }
+    }
+
+    &_winner {
+      width: $winnerCardWidthTablet;
+      height: $winnerCardHeightTablet;
+  
+      & .card__ {
+        &wrapper {
+          width: $winnerCardWidthTablet;
+          height: $winnerCardHeightTablet;
+          border-radius: 30px;
+        }
+  
+        &title {
+          padding: 16px 30px 46px;
+
+          &-text {
+            font-size: 24px;
+          }
+        }
+  
+        &image {
+          max-width: 110px;
+
+          & img {
+            width: 100%;
+          }
+  
+          &::after {
+            top: -28px;
+            left: -12px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// mobile
+@media (max-width: 414px) {
 }

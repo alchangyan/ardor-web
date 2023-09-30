@@ -10,10 +10,10 @@ function Layout({secondary = false}) {
     <div className="layout">
       <Background secondary={secondary} />
       <Header />
-      {/* <div className="layout__content">
+      <div className="layout__content">
         <Outlet />
       </div>
-      <Footer /> */}
+      <Footer />
     </div>
   );
 }

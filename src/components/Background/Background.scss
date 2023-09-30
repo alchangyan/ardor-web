@@ -88,6 +88,7 @@
       }
 
       &leftLineBlackSecondary {
+        
       }
 
       &leftLineWhite {
@@ -100,18 +101,32 @@
       }
 
       &right1 {
+        top: 302px;
+        right: -62px;
+        width: 316px;
       }
 
       &right2 {
+        width: 260px;
+        top: 200px;
       }
 
       &rightLineWhite {
+        width: 96px;
+        right: 0;
+        top: 14px;
       }
 
       &tickets {
+        width: 230px;
+        right: 22px;
+        top: 104px;
       }
 
       &lottery {
+        right: 18px;
+        top: 360px;
+        width: 378px;
       }
     }
   }

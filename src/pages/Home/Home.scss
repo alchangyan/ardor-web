@@ -99,14 +99,14 @@
       margin: 20px 0;
       max-height: calc(100vh - 200px);
       overflow: auto;
-      
+
       & h1 {
         width: 1000px;
         margin: 20px auto 0;
         line-height: 100px;
       }
     }
-    
+
     &winners-modal-list {
       display: flex;
       justify-content: center;
@@ -152,11 +152,10 @@
 
     &modal-button-wrapper {
       @extend %block;
-      margin-bottom: 200px
+      margin-bottom: 200px;
     }
   }
 }
-
 
 @keyframes rotating {
   from {
@@ -171,18 +170,89 @@
   }
 }
 
-
 // tablet
-@media (max-width:1024px) {
+@media (max-width: 1024px) {
   .home {
     & > h1 {
       width: 676px;
-      // margin: 245px auto 0;
     }
+
+    &__ {
+      &more-details-button {
+        left: 200px;
+        width: 100px;
+        height: 100px;
+        top: 576px;
+      }
+
+      &accordion {
+        margin-top: 40px;
+      }
+
+      &cards {
+        width: 100%;
+        margin: 26px auto 0;
+
+        &.winners {
+          justify-content: center;
+
+          & > div {
+            margin: 0 10px;
+          }
+        }
+      }
+
+      &card-content {
+        font-size: 24px;
+        line-height: 36px;
+
+        &.winner {
+          font-size: 18px;
+          line-height: 27px;
+        }
+      }
+
+      &winner-content {
+        & div {
+          & + div {
+            margin-top: 8px;
+          }
+
+          span:nth-child(1) {
+            margin-right: 10px;
+            font-size: 18px;
+          }
+        }
+      }
+
+      &buy-ticket-button {
+        margin-top: 80px;
+
+        &::before {
+          width: 118px;
+          left: calc(50% + 160px);
+          top: 50px;
+          background-size: contain;
+          height: 100px;
+        }
+
+        &::after {
+          width: 221px;
+          height: 66px;
+          background-size: contain;
+          top: 14px;
+          left: calc(50% + 182px);
+        }
+      }
+      &modal-button-wrapper {
+        width: 100%;
+        margin-bottom: 100px;
+      }
+    }
+
   }
 }
 
 // mobile
-@media (max-width:414px)  {
-
+@media (max-width: 414px) {
 }

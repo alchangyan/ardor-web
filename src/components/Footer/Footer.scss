@@ -19,12 +19,12 @@
       height: 100%;
       top: 0;
       left: 0;
-      
+
       & img {
         position: absolute;
         left: 0;
         z-index: 0;
-        
+
         &:nth-child(1),
         &:nth-child(2) {
           top: 0;
@@ -44,7 +44,7 @@
         width: 358px;
       }
     }
-    
+
     &social-media-links {
       margin-top: 50px;
       position: relative;
@@ -72,7 +72,7 @@
 }
 
 .footer-bottom {
-  background-color: #F8D1C3;
+  background-color: #f8d1c3;
 
   &__ {
     &wrapper {
@@ -96,7 +96,6 @@
       }
     }
 
-
     &modal-button {
       cursor: pointer;
       display: inline-block;
@@ -110,3 +109,72 @@
   }
 }
 
+// tablet
+@media (max-width: 1024px) {
+  .footer-top {
+    height: 365px;
+
+    &__ {
+      &background {
+        & img {
+          // circle
+          &:nth-child(1) {
+            width: 200px;
+          }
+          
+          // figure
+          &:nth-child(2) {
+            width: 154px;
+          }
+
+          // lines
+          &:nth-child(3) {
+            width: 164px;
+            bottom: 0;
+          }
+        }
+      }
+  
+      &logo {
+        & img {
+          width: 144px;
+        }
+      }
+  
+      &social-media-links {
+        width: 340px;
+        margin-top: 20px;
+
+        & a:active,
+        & a:visited,
+        & a:link,
+        & a {
+          width: 42px;
+          height: 42px;
+
+          & + a {
+            margin-left: 32px;
+          }
+  
+          & img {
+            width: 42px;
+          }
+        }
+      }
+    }
+  }
+
+  .footer-bottom {
+    &__ {
+      &wrapper {
+        width: calc(100% - 200px);
+        height: 52px;
+        font-size: 11px;
+      }
+    }
+  }
+}
+
+// mobile
+@media (max-width: 414px) {
+}
