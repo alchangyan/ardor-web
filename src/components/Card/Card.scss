@@ -129,6 +129,39 @@ $winnerCardHeightTablet: 256px;
         }
       }
     }
+
+    &.dynamic {
+      width: 210px;
+      height: 210px;
+
+      & .card__ {
+        &wrapper {
+          width: 210px;
+          height: 210px;
+        }
+
+        &image {
+          top: -26px;
+          left: -22px;
+        }
+
+        &title {
+          padding-bottom: 16px;
+
+          &-text {
+            margin-left: 90px;
+          }
+        }
+
+        &content {
+          padding: 0 8px;
+
+          & div + div {
+            margin-top: 0;
+          }
+        }
+      }
+    }
   }
 }
 

@@ -1,5 +1,5 @@
-import { useEffect } from 'react'
-import { Routes, Route, useLocation } from "react-router-dom";
+import { useEffect } from "react";
+import { Routes, Route, useLocation, Navigate } from "react-router-dom";
 
 import Layout from "./components/Layout";
 
@@ -7,7 +7,6 @@ import Home from "./pages/Home";
 import BuyTicket from "./pages/BuyTicket";
 import Payment from "./pages/Payment";
 import Success from "./pages/Success";
-import NoMatch from "./pages/NoMatch";
 
 function App() {
   const location = useLocation();
@@ -27,7 +26,7 @@ function App() {
           <Route path="buy-a-ticket" element={<BuyTicket />} />
           <Route path="payment" element={<Payment />} />
           <Route path="success" element={<Success />} />
-          <Route path="*" element={<NoMatch />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Route>
       </Routes>
     </div>

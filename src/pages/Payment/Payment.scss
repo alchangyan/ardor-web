@@ -11,3 +11,19 @@
     margin: 70px 0 36px;
   }
 }
+
+// tablet
+@media (max-width: 1024px) {
+  .payment {
+    width: 800px;
+  
+    & p {
+      font-size: 24px;
+      margin: 40px 0 18px;
+    }
+  }
+}
+
+// mobile
+@media (max-width: 414px) {
+}

@@ -36,3 +36,24 @@
     }
   }
 }
+
+// tablet
+@media (max-width: 1024px) {
+  .input {
+    &__ {
+      &label {
+        font-size: 24px;
+      }
+    }
+
+    & input {
+      font-size: 24px;
+      border-bottom-width: 3px;
+      padding: 6px 0;
+    }
+  }
+}
+
+// mobile
+@media (max-width: 414px) {
+}

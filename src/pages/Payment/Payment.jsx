@@ -1,5 +1,6 @@
 import TicketAmount from "../../components/TicketAmount";
 import PaymentForm from "../../components/PaymentForm";
+
 import "./Payment.scss";
 
 function Payment() {

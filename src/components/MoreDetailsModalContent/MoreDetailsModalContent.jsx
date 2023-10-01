@@ -32,7 +32,7 @@ function MoreDetailsModalContent() {
           <div style={{backgroundImage: "url(https://dummyimage.com/810x640/000/fff)"}}></div>
         </div>
       </div>
-      <div className="more-details-content__description">
+      <div className="more-details-content__description scrollbar">
         <div className="more-details-content__title">3BR Unit. Sea View.</div>
         <div className="more-details-content__subtitle">Description:</div>
         <div className="more-details-content__text">

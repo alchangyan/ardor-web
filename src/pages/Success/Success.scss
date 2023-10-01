@@ -1,6 +1,6 @@
 @import "../../scss/global";
 
-.payment {
+.success {
   width: 1240px;
   margin: 290px auto 0;
 
@@ -35,4 +35,36 @@
       }
     }
   }
+}
+
+
+// tablet
+@media (max-width: 1024px) {
+  .success {
+    width: 800px;
+
+    & h3 {
+      font-size: 48px;
+    }
+  
+    & p {
+      font-size: 24px;
+      margin: 0;
+    }
+
+    &__ {
+      &homepage-button-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 40px auto 0;
+        width: 100%;
+        margin-bottom: 100px;
+      }
+    }
+  }
+}
+
+// mobile
+@media (max-width: 414px) {
 }

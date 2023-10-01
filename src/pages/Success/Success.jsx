@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
-import "./Success.scss";
 import { useEffect } from "react";
+
+import "./Success.scss";
 
 function Success() {
   useEffect(() => {
@@ -8,11 +9,11 @@ function Success() {
   }, []);
 
   return (
-    <div className="payment">
+    <div className="success">
       <h3>Success!</h3>
       <p>Your reference ID is XXXXXXX</p>
       <p>Please check your email to see details.</p>
-      <div className="payment__homepage-button-wrapper">
+      <div className="success__homepage-button-wrapper">
         <Link to="/">
           <div className="light-button" data-modal-id="winners">
             Home Page

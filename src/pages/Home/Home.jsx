@@ -84,7 +84,7 @@ function Home() {
                 <Card
                   key={i}
                   image={winner1Img}
-                  type="winner"
+                  type="winner-dynamic"
                   title="Anna Williams"
                 >
                   <div className="home__card-content winner">

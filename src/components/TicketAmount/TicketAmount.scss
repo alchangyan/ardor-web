@@ -20,8 +20,7 @@
         position: absolute;
         top: calc(50% - 4px);
         left: calc(50% - 20px);
-
-        content: '';
+        content: "";
         width: 40px;
         height: 8px;
         border-radius: 20px;
@@ -29,7 +28,7 @@
         display: block;
       }
     }
-    
+
     &amount {
       font-size: 120px;
       font-weight: bold;
@@ -42,7 +41,7 @@
       justify-content: center;
       margin: 0 40px;
     }
-    
+
     &plus-button {
       &::after {
         transform: rotate(90deg);
@@ -54,7 +53,7 @@
       background-repeat: no-repeat;
       background-position: center center;
       margin-top: 20px;
-      color: #FFF;
+      color: #fff;
       text-align: center;
       font-size: 40px;
       font-weight: normal;
@@ -63,4 +62,37 @@
       height: 74px;
     }
   }
+}
+
+// tablet
+@media (max-width: 1024px) {
+  .ticket-amount {
+    &__ {
+      &minus-button,
+      &plus-button {
+        &::after,
+        &::before {
+          width: 32px;
+        }
+      }
+
+      &amount {
+        width: 88px;
+        height: 88px;
+        font-size: 56px;
+        margin: 0 20px;
+      }
+
+      &price {
+        font-size: 32px;
+        line-height: 70px;
+        height: 60px;
+        background-size: contain;
+      }
+    }
+  }
+}
+
+// mobile
+@media (max-width: 414px) {
 }

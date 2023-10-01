@@ -27,9 +27,9 @@ function BuyTicket() {
 
   return (
     <div className="buy-ticket">
-      <h2>
+      <h1>
         Buy a <b>Ticket</b>
-      </h2>
+      </h1>
       <p>Please select the number of consultancies you would like to buy</p>
       <TicketAmount onChange={handleTicketsCHange} />
       <InfoForm onSubmit={handleSubmit} />

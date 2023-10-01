@@ -33,6 +33,7 @@
 
   &-window {
     width: 1520px;
+    max-height: calc(100vh - 200px);
     min-height: 100px;
     z-index: 1;
     border-radius: 30px;
@@ -53,4 +54,45 @@
       }
     }
   }
+}
+
+
+// tablet
+@media (max-width:1024px) {
+  .modal {
+
+  
+    &_opened {
+     
+    }
+  
+    // mask
+    &::after {
+     
+    }
+  
+    &-window {
+      width: calc(100vw - 200px);
+  
+      // &__content {}
+  
+  
+      &__ {
+        &close-button {
+          width: 27px;
+          height: 27px;
+          right: 54px;
+
+          & > img {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+// mobile
+@media (max-width:414px)  {
+
 }
