@@ -9,11 +9,11 @@ function Layout({secondary = false}) {
   return (
     <div className="layout">
       <Background secondary={secondary} />
-      <Header />
+      {/* <Header />
       <div className="layout__content">
         <Outlet />
       </div>
-      <Footer />
+      <Footer /> */}
     </div>
   );
 }
